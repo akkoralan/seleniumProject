@@ -1,10 +1,10 @@
 Feature: Account types
-  @wip
+  @wip @smoke
   Scenario: Driver user
     Given the user loged in as "driver"
     When the user navigates "Activities" "Calendar Events"
     Then the title contain "Calendar Events - Activities"
-  @wip
+  @wip @smoke
   Scenario: Sales manager user
     Given the user loged in as "sales manager"
     When the user navigates "Customers" "Accounts"
