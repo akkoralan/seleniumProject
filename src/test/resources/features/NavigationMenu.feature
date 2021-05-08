@@ -7,7 +7,7 @@
       And the user enter Sales Manager information
       When the user navigate to Fleet, Vehicles
       Then the title should be vehicles
-   @db
+   @dbF
       Scenario: Navigating Marketing --Campaigns
         Given the user is on the login page
         And the user enter Sales Manager information

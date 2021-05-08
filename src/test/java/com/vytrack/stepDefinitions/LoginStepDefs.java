@@ -59,6 +59,19 @@ public class LoginStepDefs {
         Assert.assertEquals("Verify title","Dashboard",title);
 
     }
+    @When("the user logs in using {string} and {string}")
+    public void the_user_logs_in_using_and(String username, String password) {
+        LoginPage loginPage = new LoginPage();
+        loginPage.login(username,password);
+    }
+    @Then("the title contain {string}")
+    public void the_title_contain(String expectedTitle) {
+        BrowserUtils.waitFor(5);
+        System.out.println("\"expectedtitle\" =" + expectedTitle);
+
+        Assert.assertTrue("Actual Title"+Driver.get().getTitle(),Driver.get().getTitle().contains(expectedTitle));
+
+    }
 
 
 
